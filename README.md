@@ -1,8 +1,7 @@
 ﻿
+#API Development Assignment
 
-**API Development Assignment**
-
-**Introduction**
+###Introduction
 
 This is a short coding assignment, in which you will implement a REST API that calls an external
 
@@ -16,7 +15,7 @@ The external API that will be used here is the [Ice](https://anapioficeandfire.c
 
 authentication on your part.
 
-**Ground Rules**
+###Ground Rules
 
 ● Your solution should be submitted as a link to a GitHub repository containing a README
 
@@ -28,7 +27,7 @@ environment and running the application. Please document all details about proje
 
 setup in the README file.
 
-**Requirements to Implement**
+###Requirements to Implement
 
 Your solution should provide an implementation for each of the following requirements. The
 
@@ -147,16 +146,16 @@ is requested with the following data:
 
 ● country
 
-● number\_of\_pages
+● number_of_pages
 
 ● publisher
 
-● release\_date
+● release_date
 
 a book should be created in the local database and the following response should be returned:
 ```
 
-[
+{
 
     "status_code": 201,
     
@@ -188,7 +187,7 @@ a book should be created in the local database and the following response should
     
     ]
 
-]
+}
 ```
 **Read**
 
@@ -201,65 +200,65 @@ is requested, your solution will return a list of books from the **local databas
 response:
 ```
 
-[
-
-"status\_code": 200,
-
-"status": "success",
-
-"data": [
-
 {
 
-"id": 1,
-
-"name": "A Game of Thrones",
-
-"isbn": "978-0553103540",
-
-"authors": [
-
-"George R. R. Martin"
-
-],
-
-"number\_of\_pages": 694,
-
-"publisher": "Bantam Books",
-
-"country": "United States",
-
-"release\_date": "1996-08-01",
-
-},
-
-{
-
-"id": 2,
-
-"name": "A Clash of Kings",
-
-"isbn": "978-0553108033",
-
-"author": [
-
-"George R. R. Martin"
-
-],
-
-"number\_of\_pages": 768,
-
-"publisher": "Bantam Books",
-
-"country": "United States",
-
-"release\_date": "1999-02-02",
+    "status_code": 200,
+    
+    "status": "success",
+    
+    "data": [
+    
+        {
+        
+            "id": 1,
+            
+            "name": "A Game of Thrones",
+            
+            "isbn": "978-0553103540",
+            
+            "authors": [
+            
+                "George R. R. Martin"
+            
+            ],
+            
+            "number_of_pages": 694,
+            
+            "publisher": "Bantam Books",
+            
+            "country": "United States",
+            
+            "release_date": "1996-08-01",
+        
+        },
+        
+        {
+        
+            "id": 2,
+            
+            "name": "A Clash of Kings",
+            
+            "isbn": "978-0553108033",
+            
+            "author": [
+            
+                "George R. R. Martin"
+            
+            ],
+            
+            "number_of_pages": 768,
+            
+            "publisher": "Bantam Books",
+            
+            "country": "United States",
+            
+            "release_date": "1999-02-02",
+            
+        }
+    
+    ]
 
 }
-
-]
-
-]
 ```
 
 or precisely this JSON if the Books API returns no results:
@@ -267,11 +266,11 @@ or precisely this JSON if the Books API returns no results:
 
 {
 
-"status_code": 200,
-
-"status": "success",
-
-"data": []
+    "status_code": 200,
+    
+    "status": "success",
+    
+    "data": []
 
 }
 ```
@@ -296,11 +295,11 @@ is requested with any of the following form data:
 
 ● country
 
-● number\_of\_pages
+● number_of_pages
 
 ● publisher
 
-● release\_date
+● release_date
 
 and a specific :id in the URL, where :id is a placeholder variable for an integer (for example 1),
 
@@ -309,39 +308,39 @@ the specific book should be updated in the database and the following response s
 returned:
 ```
 
-[
+{
 
-"status\_code": 200,
-
-"status": "success",
-
-"message": "The book My First Book was updated successfully",
-
-"data": {
-
-"id": 1,
-
-"name": "My First Updated Book",
-
-"isbn": "123-3213243567",
-
-"authors": [
-
-"John Doe"
-
-],
-
-"number\_of\_pages": 350,
-
-"publisher": "Acme Books Publishing",
-
-"country": "United States",
-
-"release\_date": "2019-01-01",
+    "status_code": 200,
+    
+    "status": "success",
+    
+    "message": "The book My First Book was updated successfully",
+    
+    "data": {
+    
+        "id": 1,
+        
+        "name": "My First Updated Book",
+        
+        "isbn": "123-3213243567",
+        
+        "authors": [
+        
+            "John Doe"
+        
+        ],
+        
+        "number_of_pages": 350,
+        
+        "publisher": "Acme Books Publishing",
+        
+        "country": "United States",
+        
+        "release_date": "2019-01-01",
+    
+    }
 
 }
-
-]
 ```
 
 An alternative endpoint for updating books if you are not using a framework should be:
@@ -363,13 +362,13 @@ will be returned:
 
 [
 
-"status\_code": 204,
-
-"status": "success",
-
-"message": "The book My First Book was deleted successfully",
-
-"data": []
+    "status_code": 204,
+    
+    "status": "success",
+    
+    "message": "The book My First Book was deleted successfully",
+    
+    "data": []
 
 ]
 ```
@@ -392,56 +391,56 @@ is requested with a specific :id in the URL, where :id is a placeholder variable
 example 1), it should show the specific book and the following response will be returned:
 ```
 
-[
+{
 
-"status\_code": 200,
-
-"status": "success",
-
-"data": {
-
-"id": 1,
-
-"name": "My First Book",
-
-"isbn": "123-3213243567",
-
-"authors": [
-
-"John Doe"
-
-],
-
-"number\_of\_pages": 350,
-
-"publisher": "Acme Books Publishing",
-
-"country": "United States",
-
-"release\_date": "2019-01-01",
+    "status_code": 200,
+    
+    "status": "success",
+    
+    "data": {
+    
+    "id": 1,
+    
+    "name": "My First Book",
+    
+    "isbn": "123-3213243567",
+    
+    "authors": [
+    
+        "John Doe"
+    
+    ],
+    
+    "number_of_pages": 350,
+    
+    "publisher": "Acme Books Publishing",
+    
+    "country": "United States",
+    
+    "release_date": "2019-01-01",
+    
+    }
 
 }
-
-]
 ```
 
-**Evaluation Instructions**
+###Evaluation Instructions
 
 When evaluating the submitted solution, we will put attention on the following:
 
-● **Fully functional solution**: we will test the API endpoints and see if they return the
+- **Fully functional solution**: we will test the API endpoints and see if they return the
 
 expected results based on the provided input.
 
-○ Make sure to have things well documented in the README, so we can easily set
+- Make sure to have things well documented in the README, so we can easily set
 
 up the project and test it.
 
-● **Good code design**: we put special attention to the design of the code. Make sure your
+- **Good code design**: we put special attention to the design of the code. Make sure your
 
 code is clean and readable, it complies with the SOLID design principles and makes use
 
 of design patterns where it makes sense.
 
-**● Tested code**: don’t forget to write your tests before submitting.
+- **Tested code**: don’t forget to write your tests before submitting.
 
