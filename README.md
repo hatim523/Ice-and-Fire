@@ -1,7 +1,7 @@
-﻿
-#API Development Assignment
 
-###Introduction
+# API Development Assignment
+
+### Introduction
 
 This is a short coding assignment, in which you will implement a REST API that calls an external
 
@@ -15,7 +15,7 @@ The external API that will be used here is the [Ice](https://anapioficeandfire.c
 
 authentication on your part.
 
-###Ground Rules
+### Ground Rules
 
 ● Your solution should be submitted as a link to a GitHub repository containing a README
 
@@ -27,7 +27,7 @@ environment and running the application. Please document all details about proje
 
 setup in the README file.
 
-###Requirements to Implement
+### Requirements to Implement
 
 Your solution should provide an implementation for each of the following requirements. The
 
@@ -424,7 +424,7 @@ example 1), it should show the specific book and the following response will be 
 }
 ```
 
-###Evaluation Instructions
+### Evaluation Instructions
 
 When evaluating the submitted solution, we will put attention on the following:
 
